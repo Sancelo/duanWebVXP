@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+header {
+    background-color: rgb(16, 16, 16);
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Tạo khoảng cách đều giữa logo và nav */
+    padding: 20px; /* Khoảng cách bên trong */
+}
+
+img {
+    width: 60%;
+    
+}
+
+nav {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    list-style: none; /* Bỏ dấu chấm ở đầu danh sách */
+}
+
+.menu li {
+    flex-grow: 1; /* Chiếm không gian đều */
+    text-align: center; /* Căn giữa nội dung */
+    margin-top: 0; /* Bỏ khoảng cách trên */
+}
+
+a {
+    color: white; /* Màu chữ cho các liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+    margin: 35px 25px; /* Khoảng cách dọc */
+    display: block; /* Để các liên kết chiếm toàn bộ chiều cao của li */
+    font-size: 17px;
+    font-family: Tahoma;
+}
+.menu li:hover {
+    background-color: rgb(229, 9, 19); /* Màu nền khi hover */
+}
+.account li:hover {
+    background-color: rgb(229, 9, 19);
+}
+.account {
+    padding-left: 500px;
+}
+i {
+    color:black;
+}
+body i:active {
+     background-color: white;
+}
