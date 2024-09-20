@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title></title>
+       <link rel="stylesheet" type="text/css" href="login.css"> 
+       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+   
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://scontent.fhan4-6.fna.fbcdn.net/v/t39.30808-6/460469781_122112839690481851_316680781396091294_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEeDXm8n3fGrcOiBqm7sFm-7GrQRm066mHsatBGbTrqYbByCODmSiJD7lHxg9734mXXZrp0dNhxV22IQ1v1JOKV&_nc_ohc=AB3ewiomLsoQ7kNvgFHBmDY&_nc_zt=23&_nc_ht=scontent.fhan4-6.fna&_nc_gid=AVMXzbV2ismfiFEcui2j217&oh=00_AYBWnDQ-2lUF_5j3ChU6ybJWCdtqxLWRMEapYODT8nQaXQ&oe=66F2F966') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+            z-index: 1; /* Đảm bảo lớp phủ nằm trên hình nền */
+        }
+        
+        .login {
+            width: 420px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            color: white;
+            border-radius: 10px;
+            padding: 30px 40px;
+            position: relative; /* Đảm bảo đăng nhập nằm trên lớp phủ */
+            z-index: 2; /* Đặt lớp login trên lớp phủ */
+        }
+        
+        .login h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        .login .input-box {
+            width: 100%;
+            height: 50px;
+            
+            margin: 30px 0;
+        }
+        
+        .login .input-box {
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+            position: relative; /* Thêm dòng này */
+        }
+        
+        
+        
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+            padding-left: 20px; /* Thêm khoảng cách từ trái cho input */
+            padding-right: 50px; /* Thêm khoảng cách từ phải để không bị icon chồng lên */
+        }
+        
+        .input-box::placeholder {
+            color: #fff;
+        }
+        
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #fff;
+        }
+        
+        
+        .login .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14.5px;
+            margin: -15px 0 15px;
+        }
+        
+        .remember-forgot label input {
+            accent-color: #fff;
+            margin-right: 3px;
+        }
+        
+        .remember-forgot a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+        
+        
+        .login .btn {
+            width: 100%;
+            height: 45px;
+            background: #fff;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        
+        .login .regiser-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin: 20px 0 15px;
+        }
+        
+        
+        .regiser-link p a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        }
+        
+        
+        .regiser-link p a:hover {
+            text-decoration: underline;
+        }
+</style>
+ <body>
+        <div class="background-overlay"></div> <!-- Thêm lớp phủ -->
+        <div class="login">
+           <form action "">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user' ></i>
+            </div>
+            <div class="input-box">
+                <input type="Password"
+                placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="Remember-Forgot">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+            <a href="#">Forgot password</a>
+            </div>
+
+            <button type="submit" class="btn">Login
+
+            </button>
+             
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">
+                    Register
+                </a></p>
+            </div>
+
+
+
+           </form>
+        </div>
+    </body>
+</html>
