@@ -7,22 +7,19 @@
 body {
     background-color: black;
 }
+
 header {
     background-color: rgb(16, 16, 16);
     display: flex;
     justify-content: space-between;
+    padding: 0; /* Đảm bảo header không có padding gây khoảng cách */
 }
 
 .container {
     display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    justify-content: space-between; /* Tạo khoảng cách đều giữa logo và nav */
-    padding: 20px; /* Khoảng cách bên trong */
-}
-
-img {
-    width: 60%;
-    
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Điều chỉnh padding nếu cần */
 }
 
 nav {
@@ -31,35 +28,126 @@ nav {
 
 ul {
     display: flex;
-    list-style: none; /* Bỏ dấu chấm ở đầu danh sách */
+    list-style: none;
 }
 
 .menu li {
-    flex-grow: 1; /* Chiếm không gian đều */
-    text-align: center; /* Căn giữa nội dung */
-    margin-top: 0; /* Bỏ khoảng cách trên */
+    flex-grow: 1;
+    text-align: center;
 }
 
 a {
-    color: white; /* Màu chữ cho các liên kết */
-    text-decoration: none; /* Bỏ gạch chân */
-    margin: 35px 25px; /* Khoảng cách dọc */
-    display: block; /* Để các liên kết chiếm toàn bộ chiều cao của li */
+    color: white;
+    text-decoration: none;
+    margin: 35px 25px;
+    display: block;
     font-size: 17px;
     font-family: Tahoma;
 }
-.menu li:hover {
-    background-color: rgb(229, 9, 19); /* Màu nền khi hover */
-}
+
+.menu li:hover,
 .account li:hover {
     background-color: rgb(229, 9, 19);
 }
+
 .account {
-    padding-left: 500px;
+    padding-left: 20px; /* Điều chỉnh lại khoảng cách nếu quá lớn */
+}
+
+.image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+img {
+    width: 60%;
+}
+
+nav {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 35px 25px;
+    display: block;
+    font-size: 17px;
+    font-family: Tahoma;
+}
+
+.menu li:hover, .account li:hover {
+    background-color: rgb(229, 9, 19);
+}
+.menu li:hover a,
+.account li:hover a {
+    font-size: 19px;
+}
+.account {
+    padding-left:400px;
+}
+button {
+   background-color: rgb(16, 16, 16);
+   border: none;
+}
+button:hover {
+    background-color: rgb(229, 9, 19);
+}
+button:hover i {
+    color:rgb(16, 16, 16);
 }
 i {
-    color:black;
+    color: rgb(229, 9, 19);
+    font-size: 20px;
+    margin:15px 20px 20px;
 }
-body i:active {
-     background-color: white;
+
+.image-container {
+    width: 100%;
+    height: 100%; /* Điều chỉnh chiều cao */
+    overflow: hidden; /* Cắt bớt những phần thừa của ảnh */
+}
+
+.image-container img {
+    width: 50%;
+   height: 50%;
+   margin:0px 400px;
+    object-fit: cover; /* Ảnh lấp đầy khung */
+    display: block; /* Bỏ khoảng trống dưới ảnh */
+}
+
+/* Đặt div curve-container nằm sát với banner */
+.curve-container {
+    position: relative;
+    width: 100%;
+    height: 125px; /* Chiều cao đường cong, có thể tùy chỉnh */
+    overflow: hidden;
+    margin-top: -45px; /* Đưa đường cong sát vào banner */
+}
+
+/* Đặt canvas phủ toàn bộ div bao quanh */
+#curveCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
