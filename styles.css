@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 body {
@@ -13,13 +14,14 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0; /* Đảm bảo header không có padding gây khoảng cách */
+    box-sizing: border-box;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px; /* Điều chỉnh padding nếu cần */
+    margin: 0% auto;
 }
 
 nav {
@@ -51,7 +53,8 @@ a {
 }
 
 .account {
-    padding-left: 20px; /* Điều chỉnh lại khoảng cách nếu quá lớn */
+    padding-left: 300px; /* Điều chỉnh lại khoảng cách nếu quá lớn */
+
 }
 
 .image-container {
@@ -107,10 +110,6 @@ a {
     font-size: 19px;
 }
 
-.account {
-    padding-left:450px;
-}
-
 button {
    background-color: rgb(16, 16, 16);
    border: none;
@@ -142,6 +141,9 @@ i {
    margin:-20px 300px;
     object-fit: cover; /* Ảnh lấp đầy khung */
     display: block; /* Bỏ khoảng trống dưới ảnh */
+    justify-content: center;
+    margin: 0% auto;
+    box-sizing: border-box;
 }
 
 /* Đặt div curve-container nằm sát với banner */
